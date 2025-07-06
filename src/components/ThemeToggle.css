@@ -1,25 +1,30 @@
 .theme-toggle {
-  background: none;
-  border: none;
-  color: var(--text-main);
+  background: var(--bg-light, #fff);
+  border: 2.5px solid var(--accent, #ff3c00);
+  color: var(--accent, #ff3c00);
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0 0 0 0 var(--accent, #ff3c00);
 }
 
-.theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.1);
+.theme-toggle:hover, .theme-toggle:focus {
+  background: var(--accent, #ff3c00);
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(255,60,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+  outline: none;
+  transform: scale(1.08);
 }
 
 .theme-toggle svg {
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), color 0.3s;
+  color: inherit;
 }
 
 .theme-toggle:hover svg {
@@ -28,8 +33,8 @@
 
 @media (max-width: 768px) {
   .theme-toggle {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     padding: 6px;
   }
 } 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './Navbar.css'
 
 interface NavbarProps {
@@ -6,8 +6,29 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ themeToggle }) => {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const lastScrollY = useRef(window.scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 50) {
+        setShowNavbar(true);
+        lastScrollY.current = window.scrollY;
+        return;
+      }
+      if (window.scrollY > lastScrollY.current) {
+        setShowNavbar(false); // scrolling down
+      } else {
+        setShowNavbar(true); // scrolling up
+      }
+      lastScrollY.current = window.scrollY;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar${showNavbar ? '' : ' navbar--hidden'}`}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <img src="/LOGO The Wicked Daze Clothing.jpg" alt="The Wicked Daze Clothing Logo" className="brand-logo-img" />
