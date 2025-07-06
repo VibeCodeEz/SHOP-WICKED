@@ -1,0 +1,145 @@
+.contact-section {
+  background: #fafafa;
+  padding: 4rem 0 3rem 0;
+}
+
+.contact-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.contact-info-block {
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+.contact-info-block p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-block a {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+.contact-form-block {
+  margin-bottom: 2.5rem;
+}
+
+.contact-form-block h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fafafa;
+  transition: border-color 0.2s;
+}
+
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus {
+  border-color: #764ba2;
+  outline: none;
+}
+
+.send-btn {
+  background: #764ba2;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.2s;
+}
+
+.send-btn:hover {
+  background: #5a368c;
+}
+
+.contact-success {
+  color: #2e7d32;
+  background: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.contact-social-callout {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.callout-text {
+  font-size: 1.1rem;
+  color: #764ba2;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  color: #764ba2;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: #1a1a1a;
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 0 0.5rem;
+  }
+  .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .send-btn {
+    width: 100%;
+    align-self: stretch;
+  }
+} 
