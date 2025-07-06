@@ -48,7 +48,7 @@ function App() {
   }, [isDark])
 
   if (isLoading) {
-    return (
+  return (
       <div className="loading-screen">
         <div className="loading-spinner"></div>
         <p>Loading Wicked Daze...</p>
@@ -71,7 +71,7 @@ function App() {
         imageAlt={modalImage?.alt || ''}
         onClose={closeImageModal}
       />
-    </div>
+      </div>
   )
 }
 
